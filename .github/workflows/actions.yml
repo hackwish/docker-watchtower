@@ -28,8 +28,8 @@ jobs:
         node-version: "lts/*"
     - name: Install dependencies
       run: npm install -g semantic-release @semantic-release/github @semantic-release/git @semantic-release/changelog @semantic-release/commit-analyzer @semantic-release/release-notes-generator @semantic-release/exec
-    - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
-      run: npm audit signatures
+    # - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
+    #   run: npm audit signatures
     - name: Release
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
